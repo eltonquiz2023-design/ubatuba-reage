@@ -1,0 +1,58 @@
+name: "Ubatuba Reage — Marketing Squad"
+code: ubatuba-reage
+description: "Squad de marketing para criar posts de ativismo cívico no Instagram para o perfil @ubatubareage."
+icon: "🔥"
+version: "2.0.0"
+mode: alta-performance
+created: "2026-03-23"
+updated: "2026-03-24"
+
+agents:
+  # Pesquisa
+  - id: squads/ubatuba-reage/agents/ricardo-rastreio
+    role: researcher
+  # Criacao de conteudo
+  - id: squads/ubatuba-reage/agents/igor-instagram
+    role: creator-feed
+  - id: squads/ubatuba-reage/agents/rafa-reels
+    role: creator-reels
+  # Revisao e curadoria
+  - id: squads/ubatuba-reage/agents/vera-veredito
+    role: reviewer
+  - id: squads/ubatuba-reage/agents/carlos-curador
+    role: curador-editorial
+  - id: squads/ubatuba-reage/agents/lucia-local
+    role: curador-comunitario
+  - id: squads/ubatuba-reage/agents/bia-boost
+    role: curador-estrategico
+  # Design e producao
+  - id: squads/ubatuba-reage/agents/dani-design
+    role: designer
+  - id: squads/ubatuba-reage/agents/leo-legenda
+    role: caption-writer
+  - id: squads/ubatuba-reage/agents/sara-stories
+    role: stories-creator
+  # Pos-publicacao
+  - id: squads/ubatuba-reage/agents/cris-comunidade
+    role: community-manager
+  - id: squads/ubatuba-reage/agents/ana-analytics
+    role: analytics
+
+skills:
+  - web_search
+  - web_fetch
+  - canva
+  - image-generator
+  - instagram-publisher
+
+data:
+  - pipeline/data/research-brief.md
+  - pipeline/data/domain-framework.md
+  - pipeline/data/quality-criteria.md
+  - pipeline/data/output-examples.md
+  - pipeline/data/anti-patterns.md
+  - pipeline/data/tone-of-voice.md
+  - pipeline/data/curadoria-criterios.md
+  - pipeline/data/campaigns.md
+
+pipeline: pipeline/pipeline.yaml

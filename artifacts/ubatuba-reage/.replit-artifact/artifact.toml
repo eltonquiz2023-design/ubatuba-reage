@@ -1,0 +1,35 @@
+kind = "web"
+previewPath = "/"
+title = "Ubatuba Reage"
+version = "1.0.0"
+id = "ubatuba-reage-001"
+
+[[services]]
+localPort = 3000
+name = "Ubatuba Reage"
+paths = ["/", "/_next"]
+
+[services.env]
+PORT = "3000"
+
+[services.development]
+run = "pnpm --filter @workspace/ubatuba-reage run dev"
+
+[services.production]
+
+[services.production.build]
+args = ["pnpm", "--filter", "@workspace/ubatuba-reage", "run", "build"]
+
+[services.production.build.env]
+NODE_ENV = "production"
+
+[services.production.run]
+args = ["node", "artifacts/ubatuba-reage/.next/standalone/artifacts/ubatuba-reage/server.js"]
+
+[services.production.run.env]
+PORT = "3000"
+NODE_ENV = "production"
+HOSTNAME = "0.0.0.0"
+
+[services.production.health.startup]
+path = "/"
